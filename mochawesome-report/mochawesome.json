@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2024-05-08T09:25:57.986Z",
+    "end": "2024-05-08T09:26:01.854Z",
+    "duration": 3868,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "837c41d9-4687-45e0-8938-7d8a6c3f9970",
+      "title": "",
+      "fullFile": "D:\\Belajar\\Sanbercode\\Kelas Karyawan QA Automation\\Tugas Pekanan 3\\module\\test\\suites\\booking.suite.js",
+      "file": "\\module\\test\\suites\\booking.suite.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3bac715c-dd21-4b40-a1d4-66912769d980",
+          "title": "End to End - Booking",
+          "fullFile": "D:\\Belajar\\Sanbercode\\Kelas Karyawan QA Automation\\Tugas Pekanan 3\\module\\test\\suites\\booking.suite.js",
+          "file": "\\module\\test\\suites\\booking.suite.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success Create Booking",
+              "fullTitle": "End to End - Booking Success Create Booking",
+              "timedOut": false,
+              "duration": 324,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await createBooking();\nexpect(awaitresponse.status).to.equal(418);\nbookingId = (await response).body.bookingId;",
+              "err": {
+                "message": "Error: getaddrinfo EAI_AGAIN restful-booker.herokuapp.com",
+                "estack": "Error: getaddrinfo EAI_AGAIN restful-booker.herokuapp.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)",
+                "diff": null
+              },
+              "uuid": "e55b373b-bd73-4833-b6f5-c233cb622111",
+              "parentUUID": "3bac715c-dd21-4b40-a1d4-66912769d980",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Success Get Booking",
+              "fullTitle": "End to End - Booking Success Get Booking",
+              "timedOut": false,
+              "duration": 1518,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await getBooking.id(bookingId);\nexpect(await response.status).to.equal(418);\nbookingId = (await response).body.bookingId;",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 418",
+                "estack": "AssertionError: expected 404 to equal 418\n    at Context.<anonymous> (file:///D:/Belajar/Sanbercode/Kelas%20Karyawan%20QA%20Automation/Tugas%20Pekanan%203/module/test/suites/booking.suite.js:24:38)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": "- 404\n+ 418\n"
+              },
+              "uuid": "db8147ab-3df0-4038-9d0d-2792d19d2b59",
+              "parentUUID": "3bac715c-dd21-4b40-a1d4-66912769d980",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Success Update Booking",
+              "fullTitle": "End to End - Booking Success Update Booking",
+              "timedOut": true,
+              "duration": 2001,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "token = await createToken();\nconst response = await updateBooking(bookingId, token); //tamahan\nexpect(await response.status).to.equal(418);\n// bookingId = (await response).body.bookingId;",
+              "err": {
+                "message": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (D:\\Belajar\\Sanbercode\\Kelas Karyawan QA Automation\\Tugas Pekanan 3\\module\\test\\suites\\booking.suite.js)",
+                "estack": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (D:\\Belajar\\Sanbercode\\Kelas Karyawan QA Automation\\Tugas Pekanan 3\\module\\test\\suites\\booking.suite.js)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)",
+                "diff": null
+              },
+              "uuid": "98badf92-3d2c-464c-8cde-f431736785e2",
+              "parentUUID": "3bac715c-dd21-4b40-a1d4-66912769d980",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e55b373b-bd73-4833-b6f5-c233cb622111",
+            "db8147ab-3df0-4038-9d0d-2792d19d2b59",
+            "98badf92-3d2c-464c-8cde-f431736785e2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3843,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
